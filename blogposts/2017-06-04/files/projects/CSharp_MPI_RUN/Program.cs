@@ -16,7 +16,7 @@ namespace CSharp_MPI_RUN
                 bool ACTUALLY_RUN_THE_KERNEL = true;
                 const string SPACE = " ";
 
-                string bin_folder_on_host = @"\\192.168.1.8\Debug"; //host isn't involved in computing
+                string bin_folder_on_host = @"\\192.168.48.1\Debug"; //host isn't involved in computing
                 string executable_kernel = @"CSharp_MPI_Kernel.exe";
 
                 string MPI_Shared_Work_Directory = @"MPI_Work_Directory\";
@@ -30,10 +30,10 @@ namespace CSharp_MPI_RUN
                 var unique_name = $"{Year}_{Month}_{Day}_{Hour}_{Minute}_{Second}" + @"\";
                 string TargetTempFolder = MPI_Shared_Work_Directory + (USE_MASTER_SHARED_FOLDER ? "" : unique_name);
 
-                var master = "192.168.1.21";
+                var master = "192.168.48.128";
                 var slaves = new List<string>(new string[] {
-                    "192.168.1.22",
-                    "192.168.1.26",
+                    "192.168.48.130",
+                    "192.168.48.129",
                 });
 
                 Func<string,string> get_network_shared_folder = (ip) => @"\\" + ip + @"\" + TargetTempFolder;
