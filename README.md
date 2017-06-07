@@ -8,7 +8,7 @@ Experimenting with MSMPI and MPI.NET on Virtual Machine
 
 <hr/>
 
-Book of the month (June 2017):
+Featured book of the month (June 2017):
 
 <a href='http://www.springer.com/gp/book/9783319219028'>Introduction to HPC with MPI for Data Science</a>
 
