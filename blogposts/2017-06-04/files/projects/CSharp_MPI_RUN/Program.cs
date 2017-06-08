@@ -167,9 +167,6 @@ namespace CSharp_MPI_RUN
             {
                 Console.WriteLine(err.ToString());
             }
-
-            Console.WriteLine("Press ENTER to exit...");
-            Console.ReadLine();
         }
     }
 }
