@@ -52,6 +52,8 @@
 <li>Make sure the SMPD is run using "-d 3" on all VM instances.</li>
 
 <li>For the first testing, run MPIEXEC followed by the argument "-d 3" before all other arguments such as "-host" or "-hosts". If this runs well, next time you can switch it to "-d 0" (on SMPD & MPIEXEC) so the output is purely from your kernel ("AppNameOfMPI"), and you won't see any information from SMPD when running the MPIEXEC.</li>
+
+<li>To automate the SMPD, put the shortcut to SMPD at this folder "shell:startup" (open the folder using RUN). For Windows Server 2008, this is at "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup". Right click at the shortcut, go to "Settings" tab, and append this at the end of the "Target" text box: " -d 0". Change the value of "Run" dropdownlist to "Minimized". Click the "Advanced" button, and tick the "Run as administrator". Good! Now each time you login to Windows, the SMPD will run automatically. You can recheck this from MSCONFIG; make sure it's ticked.</li>
 </ol>
 
 # Images
